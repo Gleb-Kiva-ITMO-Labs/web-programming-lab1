@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    todo favicon    -->
+    <!--    todo animations    -->
+    <!--    todo fixed size-shooting area   -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="content" class="flexable-column">
+    <header id="header" class="flexable-row">
+        <img id="header-logo" src="assets/logo.svg">
+        <span>developed by <a href="https://github.com/feironox5" target="_blank">Gleb Kiva</a></span>
+    </header>
+    <div class="flexable-section flexable-row" style="gap: var(--content-offset);">
+        <div id="graph-section" class="container">
+            <svg id="graph-view"></svg>
+        </div>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="index.js"></script>
+        <div id="actions-section" class="flexable-section flexable-column container">
+            <div id="results-section" class="flexable-section">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>X</th>
+                        <th>Y</th>
+                        <th>R</th>
+                        <th>Result</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>Попал</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="form-section">
+                <div class="flexable-row" style="gap: 5px;">
+                    <input type="text" class="flexable-section" placeholder="Input 1">
+                    <input type="text" class="flexable-section" placeholder="Input 2">
+                </div>
+                <input placeholder="Input 3" style="width: 100%; margin-top: 5px;">
+                <button class="fire-button" style="width: 100%; margin-top: 10px;">Fire</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

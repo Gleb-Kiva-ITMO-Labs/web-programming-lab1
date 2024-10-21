@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':libs:fastcgi')
+}
+
+jar {
+    destinationDirectory.set(file("../out/httpd-root/fcgi-bin"))
+    manifest {
+        attributes(
+                'Main-Class': 'App'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    archiveFileName = 'server.jar'
+}
